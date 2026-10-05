@@ -1,0 +1,14 @@
+.env
+
+src/ms-configuration.Api/bin
+src/ms-configuration.Api/obj
+src/ms-configuration.Api/appsettings.*
+tests/**/bin*/
+tests/**/obj*/
+
+.idea
+
+src/ms-configuration.Api/Config
+
+bin/
+obj/
