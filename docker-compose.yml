@@ -1,0 +1,28 @@
+services:
+  ms-configuration.api:
+    container_name: ms-configuration
+    image: ms-configuration.api
+    build:
+      context: .
+      dockerfile: src/ms-configuration.Api/Dockerfile
+    ports:
+      - "8080"
+    env_file:
+      - .env
+    networks:
+      - sg-services-network
+
+  ms-configuration.tests:
+    container_name: ms-configuration-tests
+    image: mcr.microsoft.com/dotnet/sdk:10.0
+    working_dir: /src
+    volumes:
+      - ./:/src
+    command: dotnet test ./tests/ms-configuration.Tests/ --nologo
+    profiles: [ "tests" ]
+    networks:
+      - sg-services-network
+
+networks:
+  sg-services-network:
+    external: true

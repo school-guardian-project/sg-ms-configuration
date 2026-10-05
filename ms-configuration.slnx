@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/ms-configuration.Api/ms-configuration.Api.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/ms-configuration.Tests/ms-configuration.Tests.csproj" />
+  </Folder>
+</Solution>
